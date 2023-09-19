@@ -1,0 +1,25 @@
+name: Insert Google Analytics 4 Script
+
+on:
+  workflow_dispatch:
+
+jobs:
+  insert-script:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Insert Google Analytics 4 Script
+      run: |
+        for file in $(find . -name "*.html"); do
+          sed -i 's|</head>|<script async src="https://www.googletagmanager.com/gtag/js?id=G-065EB95L63"></script>\n<script>\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag("js", new Date());\ngtag("config", "G-065EB95L63");\n</script>\n</head>|' "$file"
+        done
+
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git commit -m "Insert Google Analytics 4 script" || echo "No changes to commit"
+        git push
