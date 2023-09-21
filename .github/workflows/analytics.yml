@@ -21,8 +21,8 @@ jobs:
       - name: Inject Google Analytics
         run: |
           for file in $(find . -name '*.html'); do
-            analytics=$(cat googleanalytics.js)
-            sed -i "s|</head>|${analytics}\n</head>|" "$file"
+            analytics=$(cat googleanalytics.js | base64)
+            sed -i "s|</head>|<script>atob('${analytics}')</script>\n</head>|" "$file"
           done
           
       - name: Commit changes
