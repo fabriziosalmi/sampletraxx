@@ -1,9 +1,7 @@
 name: Inject Google Analytics
 
 on:
-  push:
-    branches:
-      - main # or the default branch of your repo
+  workflow_dispatch:
 
 jobs:
   inject-analytics:
