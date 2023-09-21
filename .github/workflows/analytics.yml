@@ -1,0 +1,35 @@
+name: Inject Google Analytics
+
+on:
+  workflow_dispatch:
+
+jobs:
+  inject-analytics:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+        
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          
+      - name: Inject Google Analytics
+        run: |
+          for file in $(find . -name '*.html'); do
+            # Escape backslashes, ampersands, and slashes for use in awk and sed.
+            analytics=$(sed -e 's:[][\/&]:\\&:g' googleanalytics.js)
+            # Use awk to inject analytics before </head> and write to a temp file, then overwrite the original file with the temp file.
+            awk -v var="$analytics" '{sub("</head>",var"</head>"); print $0}' "$file" > temp_file && mv temp_file "$file"
+          done
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          if git commit -m "Inject Google Analytics"; then
+            git push
+          fi
