@@ -1,7 +1,9 @@
 name: Inject Google Analytics
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main # or the default branch of your repo
 
 jobs:
   inject-analytics:
@@ -19,8 +21,9 @@ jobs:
       - name: Inject Google Analytics
         run: |
           for file in $(find . -name '*.html'); do
-            analytics=$(cat googleanalytics.js | base64)
-            sed -i "s|</head>|<script>atob('${analytics}')</script>\n</head>|" "$file"
+            analytics=$(cat googleanalytics.js | base64 | tr -d '\n')
+            awk -v var="<script>atob('$analytics')</script>" \
+                '{sub("</head>",var"</head>"); print $0}' "$file" > temp_file && mv temp_file "$file"
           done
           
       - name: Commit changes
