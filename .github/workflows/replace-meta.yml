@@ -1,0 +1,25 @@
+name: Replace Meta Robots Tag
+
+on:
+  workflow_dispatch:
+
+jobs:
+  replace-string:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Replace string in all HTML files
+        run: |
+          find . -type f -name '*.html' -exec sed -i 's|<meta name="robots" content="noindex, nofollow">|<meta name="robots" content="index, follow">|g' {} +
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          if git commit -m "Replace meta robots tag in all HTML files"; then
+            git push
+          fi
