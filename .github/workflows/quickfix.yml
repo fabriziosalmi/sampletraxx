@@ -13,7 +13,7 @@ jobs:
 
     - name: Remove specified string from all HTML files
       run: |
-        find . -type f -name '*.html' -exec sed -i "s|<<<<<<< HEAD||g" {} +
+        find . -type f -name '*.html' -exec sed -i 's|<meta name="robots" content="index, follow">||g' {} +
 
     - name: Commit changes
       run: |
