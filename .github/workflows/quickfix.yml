@@ -13,8 +13,9 @@ jobs:
 
     - name: Remove specified string from all HTML files
       run: |
-        find . -type f -name '*.html' -exec sed -i 's|<meta name="robots" content="index, follow">||g' {} +
-
+        find . -type f -name '*.html' -exec sed -i 's|=======||g' {} +
+        find . -type f -name '*.html' -exec sed -i 's|>>>>>>> 784da82d7cd708fc8c4b9dabfc0367adb69b16d5||g' {} +
+        
     - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
