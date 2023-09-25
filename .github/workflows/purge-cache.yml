@@ -1,10 +1,6 @@
 name: Purge Cloudflare Cache
 
 on:
-  workflow_run:
-    workflows: ["Inject Google Analytics"]
-    types:
-      - completed
   workflow_dispatch:
 
 jobs:
