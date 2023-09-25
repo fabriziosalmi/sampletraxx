@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://www.sampletraxx.com/</loc>
-		<lastmod>2023-09-23T19:51:29+00:00</lastmod>
+		<lastmod>2023-09-25T09:02:54+00:00</lastmod>
 		<image:image>
 			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/09/microsignal.avif</image:loc>
 		</image:image>
@@ -361,10 +361,34 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.sampletraxx.com/release/</loc>
-		<lastmod>2023-09-16T09:43:35+00:00</lastmod>
+		<loc>https://www.sampletraxx.com/contact/</loc>
+		<lastmod>2023-09-17T18:30:19+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.sampletraxx.com/release/bundle-box/</loc>
+		<lastmod>2023-09-25T08:42:09+00:00</lastmod>
 		<image:image>
-			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/09/microsignal.png</image:loc>
+			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/07/summer-bundle-jpg.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/06/MACABRE-BUNDLE-jpg.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/06/arsenal_2_square-jpg.webp</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.sampletraxx.com/release/arsenal/</loc>
+		<lastmod>2023-09-25T08:42:26+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/03/arsenal_1b_banner-mini.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.sampletraxx.com/release/</loc>
+		<lastmod>2023-09-25T09:04:56+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/09/microsignal.avif</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/07/fracture.png</image:loc>
@@ -464,30 +488,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/06/Ui-TRAILER-TOOLS.png</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.sampletraxx.com/contact/</loc>
-		<lastmod>2023-09-17T18:30:19+00:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.sampletraxx.com/release/bundle-box/</loc>
-		<lastmod>2023-09-25T08:42:09+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/07/summer-bundle-jpg.webp</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/06/MACABRE-BUNDLE-jpg.webp</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/06/arsenal_2_square-jpg.webp</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.sampletraxx.com/release/arsenal/</loc>
-		<lastmod>2023-09-25T08:42:26+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.sampletraxx.com/wp-content/uploads/2023/03/arsenal_1b_banner-mini.jpg</image:loc>
 		</image:image>
 	</url>
 </urlset>
