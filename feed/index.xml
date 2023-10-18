@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
 	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
@@ -12,13 +13,13 @@
 	<atom:link href="https://www.sampletraxx.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.sampletraxx.com/</link>
 	<description>Professional sound effects and state of the art sound design.</description>
-	<lastBuildDate>Mon, 09 Oct 2023 15:03:32 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 18 Oct 2023 15:29:23 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.3.1</generator>
+	<generator>https://wordpress.org/?v=6.3.2</generator>
 
 <image>
 	<url>https://www.sampletraxx.com/wp-content/uploads/2023/03/cropped-sampletraxx_logo_512x512-32x32.jpg</url>
